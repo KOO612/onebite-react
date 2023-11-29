@@ -1,27 +1,15 @@
 import React from 'react';
 import Button from '../components/Button';
-
+import Header from '../components/Header';
+import Editor from '../components/Editor';
 const Home = () => {
   return (
     <div>
-      <Button
-        text={'기본 버튼'}
-        onClick={() => {
-          alert('default');
-        }}
-      />
-      <Button
-        type="positive"
-        text={'긍정 버튼'}
-        onClick={() => {
-          alert('positive');
-        }}
-      />
-      <Button
-        type="negative"
-        text={'부정 버튼'}
-        onClick={() => {
-          alert('negative');
+      <Editor
+        initData={{
+          date: new Date().getTime(),
+          emotionId: 1,
+          content: '이전에 작성했던 일기',
         }}
       />
     </div>
